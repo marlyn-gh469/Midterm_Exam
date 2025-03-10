@@ -1,0 +1,24 @@
+{
+  "name": "midtermexam",
+  "version": "1.0.0",
+  "main": "filterEvenNumbers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlyn-gh469/Midterm_Exam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marlyn-gh469/Midterm_Exam/issues"
+  },
+  "homepage": "https://github.com/marlyn-gh469/Midterm_Exam#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
