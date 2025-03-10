@@ -1,11 +1,20 @@
-const express = require('express');
-const app = express();
+const express = require("express");
+const { User } = require("./models");
 
-app.get('/test', (req, res) => {
-    res.json({ message: 'Express is working! Write your full name' });
+const app = express();
+const PORT = 3000;
+
+app.use(express.json());  
+
+app.get("/users", async (req, res) => {
+    try {
+        const users = await User.findAll();
+        res.json(users);
+    } catch (error) {
+        res.status(500).json({ error: "Failed to fetch users" });
+    }
 });
 
-
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
